@@ -14,8 +14,5 @@ export default function getTheme(value: TValue, key: string): TTheme {
   const type = getNodeType(value, key)
   const globalThemes = getGlobalThemesByNodeType(value, type) || {}
   const globalTheme = globalThemes[themeName]
-  return {
-    ...globalTheme,
-    ...theme,
-  }
+  return Object.assign({}, globalTheme, theme)
 }
