@@ -10,6 +10,7 @@
 [include]
 
 [libs]
+types/
 
 [options]
 suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe

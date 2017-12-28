@@ -1,5 +1,5 @@
 {
-  "name": "node-starter",
+  "name": "slate-util",
   "version": "0.1.0",
   "description": "",
   "main": "lib",
@@ -19,7 +19,7 @@
   ],
   "bin": {},
   "repository": {
-    "url": "git+https://github.com/joehua87/node-starter.git",
+    "url": "git+https://github.com/joehua87/slate-util.git",
     "type": "git"
   },
   "nyc": {
@@ -30,9 +30,9 @@
   "author": "joehua87 <joehua87@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joehua87/node-starter/issues"
+    "url": "https://github.com/joehua87/slate-util/issues"
   },
-  "homepage": "https://github.com/joehua87/node-starter#readme",
+  "homepage": "https://github.com/joehua87/slate-util#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.2",
@@ -53,6 +53,8 @@
     "nyc": "^11.3.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "lodash.omit": "^4.5.0",
+    "lodash.pickby": "^4.6.0"
   }
 }
