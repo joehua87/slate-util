@@ -10,13 +10,12 @@ function getGlobalThemesByNodeType(value: TValue, nodeType: string): TTheme {
 
 export default function getTheme(value: TValue, key: string): TTheme {
   const data = getNodeData(value, key)
-  const { theme, themeName, themeType = 'custom' } = data
-  if (themeType === 'custom') {
-    return theme
-  }
-
+  const { theme, themeName } = data
   const type = getNodeType(value, key)
-  const globalThemes = getGlobalThemesByNodeType(value, type)
-  if (!globalThemes) return {}
-  return globalThemes[themeName]
+  const globalThemes = getGlobalThemesByNodeType(value, type) || {}
+  const globalTheme = globalThemes[themeName]
+  return {
+    ...globalTheme,
+    ...theme,
+  }
 }
